@@ -5,12 +5,12 @@ const ticketSchema = mongoose.Schema(
     user: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
-      ref: 'User'
+      ref: "User",
     },
     product: {
       type: String,
       required: [true, "Please select a product"],
-      enum: ['iPhone', 'Macbook Pro', 'iMac', 'iPad']
+      enum: ["iPhone", "Macbook Pro", "iMac", "iPad"],
     },
     description: {
       type: String,
@@ -19,8 +19,8 @@ const ticketSchema = mongoose.Schema(
     status: {
       type: String,
       required: true,
-      enum: ['new', 'open', 'closed'],
-      default: 'new',
+      enum: ["new", "open", "closed"],
+      default: "new",
     },
   },
   {

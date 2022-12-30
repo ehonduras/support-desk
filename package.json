@@ -7,7 +7,11 @@
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "lint": "npm run lint:eslint && npm run lint:stylelint && npm run lint:prettier",
+    "lint:eslint": "eslint --ext js,jsx src",
+    "lint:prettier": "prettier --check \"src/**/*.{js,jsx}\"",
+    "lint:fix:prettier": "prettier --write \"**/**/*.{js,jsx}\""
   },
   "author": "Ermin",
   "license": "ISC",
@@ -16,6 +20,7 @@
     "colors": "^1.4.0",
     "concurrently": "^7.6.0",
     "dotenv": "^16.0.3",
+    "eslint": "^8.30.0",
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^9.0.0",
@@ -23,6 +28,6 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20",
-    "prettier": "2.8.1"
+    "prettier": "^2.8.1"
   }
 }
