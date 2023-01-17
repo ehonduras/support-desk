@@ -11,7 +11,8 @@
     "lint": "npm run lint:eslint && npm run lint:stylelint && npm run lint:prettier",
     "lint:eslint": "eslint --ext js,jsx src",
     "lint:prettier": "prettier --check \"src/**/*.{js,jsx}\"",
-    "lint:fix:prettier": "prettier --write \"**/**/*.{js,jsx}\""
+    "lint:fix:prettier": "prettier --write \"**/**/*.{js,jsx}\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "Ermin",
   "license": "ISC",
