@@ -11,9 +11,12 @@ const Home = () => {
       </section>
       <Link to="/newticket" className="btn btn-reverse btn-block">
         <FaQuestionCircle /> Create New Ticket
-        {/* {
-          window.pe.track('homePageVisit', { propertyName: 'homePageVisit' })
-        } */}
+        {
+          console.log(window.pe, window.liveChat)
+        }
+        {
+          console.log(window.document.pe, window.document.liveChat)
+        }
       </Link>
       <Link to="/tickets" className="btn btn-block">
         <FaTicketAlt /> View My Tickets  
