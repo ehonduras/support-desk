@@ -13,11 +13,10 @@ const Home = () => {
         <FaQuestionCircle /> Create New Ticket
       </Link>
       <Link to="/tickets" className="btn btn-block">
-        <FaTicketAlt /> View My Tickets  
+        <FaTicketAlt /> View My Tickets
       </Link>
     </>
   );
 };
 
 export default Home;
- 
