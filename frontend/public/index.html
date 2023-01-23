@@ -24,6 +24,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <!-- live chat integration -->
     <script>
       (function(I,n,f,o,b,i,p){
       I[b]=I[b]||function(){(I[b].q=I[b].q||[]).push(arguments)};
@@ -32,6 +33,20 @@
       (window,document,'script','https://livechat.infobip.com/widget.js','liveChat');
       
       liveChat('init', 'ba3b33c7-e0c1-4f27-a7ba-5ddd888b6b81');
+      </script>
+    <!-- people web integration -->
+    <script>
+      (function(e,t,n,o){e.PeopleEventsObject=o;e[o]=e[o]||{init:function(t){e[o].apiKey=t},
+      setPerson:function(t,n){e[o].person=t;e[o].personTtl=n},
+      forgetPerson:function(){e[o].toForgetPerson=true},
+      track:function(){(e[o].q=e[o].q||[]).push(arguments)},
+      updatePerson:function(t){e[o].personToUpdate={person:t}},
+      appendToList:function(t,n){e[o].attributeToAppend={attributeName:t,attribute:n}}};
+      var r=t.createElement("script");
+      var s=t.getElementsByTagName("script")[0];r.async=1;r.src=n;s.parentNode.insertBefore(r,s)})
+      (window,document,'https://s3.eu-central-1.amazonaws.com/portal-cdn-production/people-events-sdk/pe.latest-2.js','pe');
+      
+      pe.init('17eefe444171068f6341b14931285ce9-69d7a2f4-aaa1-4d53-94c3-b19fc3b6ade1');
       </script>
     <title>React Redux App</title>
   </head>
