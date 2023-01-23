@@ -12,7 +12,15 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!-- live chat integration -->
-    <script src="../src/integrations/livech.js"></script>
+    <script>
+      (function(I,n,f,o,b,i,p){
+      I[b]=I[b]||function(){(I[b].q=I[b].q||[]).push(arguments)};
+      I[b].t=1*new Date();i=n.createElement(f);i.async=1;i.src=o;
+      p=n.getElementsByTagName(f)[0];p.parentNode.insertBefore(i,p)})
+      (window,document,'script','https://livechat.infobip.com/widget.js','liveChat');
+      
+      liveChat('init', 'ba3b33c7-e0c1-4f27-a7ba-5ddd888b6b81');
+    </script>
     <!-- people web integration -->
     <script>
       (function(e,t,n,o){e.PeopleEventsObject=o;e[o]=e[o]||{init:function(t){e[o].apiKey=t},
