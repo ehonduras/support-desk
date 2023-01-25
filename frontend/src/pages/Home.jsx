@@ -10,7 +10,7 @@ const Home = () => {
         <p>Please choose from an option below</p>
       </section>
       <Link to="/newticket" className="btn btn-reverse btn-block">
-        <FaQuestionCircle /> Create New Ticket
+        <FaQuestionCircle /> Create New Ticket 
       </Link>
       <Link to="/tickets" className="btn btn-block">
         <FaTicketAlt /> View My Tickets

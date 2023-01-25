@@ -8,8 +8,7 @@
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "lint:fix:prettier": "prettier --write \"**/**/*.{js,jsx}\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "lint:fix:prettier": "prettier --write \"**/**/*.{js,jsx}\""
   },
   "author": "Ermin",
   "license": "ISC",
